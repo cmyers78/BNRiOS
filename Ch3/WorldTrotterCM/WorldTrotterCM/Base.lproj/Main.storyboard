@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotterCM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConversionViewController" customModule="WorldTrotterCM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,10 +48,14 @@
                                 </constraints>
                                 <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="fcn-BV-BCk"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ka3-LZ-D7U" firstAttribute="centerX" secondItem="th5-gu-6bI" secondAttribute="centerX" id="05d-tl-gaX"/>
                             <constraint firstItem="th5-gu-6bI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="5b3-GB-lmo"/>
@@ -65,10 +69,22 @@
                             <constraint firstItem="Ka3-LZ-D7U" firstAttribute="top" secondItem="th5-gu-6bI" secondAttribute="bottom" constant="21" id="twt-Lc-NNN"/>
                             <constraint firstItem="ajm-Bo-ZDq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxV-ka-PD9"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qUm-mp-wrm" appends="YES" id="dBS-LY-Zje"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="Nly-jB-U3x" id="PyT-1o-ayl"/>
+                        <outlet property="textField" destination="ajm-Bo-ZDq" id="iHh-8o-rk9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qUm-mp-wrm">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="QL2-wQ-Oye"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
