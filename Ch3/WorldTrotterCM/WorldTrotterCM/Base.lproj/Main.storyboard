@@ -88,5 +88,18 @@
                 </tapGestureRecognizer>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JDH-Ch-PHr">
+            <objects>
+                <viewController id="ML7-yy-j2a" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="fmR-qi-vgL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZZ-kN-1U3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="231"/>
+        </scene>
     </scenes>
 </document>
