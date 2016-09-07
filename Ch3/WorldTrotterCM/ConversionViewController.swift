@@ -48,14 +48,26 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         //print ("Current text: \(textField.text)")
         //print ("Replacement text: \(string)")
         
+        // MARK : Bronze Challenge - Chapter 4
+        
+        let existingAlpha = textField.text?.rangeOfCharacterFromSet (NSCharacterSet.letterCharacterSet())
+        let replacementAlpha = string.rangeOfCharacterFromSet(NSCharacterSet.letterCharacterSet())
+        
+        if existingAlpha != nil && replacementAlpha != nil {
+            return false
+        }
+        
+
         let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
         let replacementTextHasDecimalSeparator = string.rangeOfString(".")
         
         if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
             return false
+            
         } else {
             return true
         }
+        
     }
     
     @IBAction func dismissKeyboard(sender : AnyObject) {
