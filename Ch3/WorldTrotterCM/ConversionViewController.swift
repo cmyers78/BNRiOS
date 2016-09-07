@@ -55,7 +55,7 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         
         if existingAlpha != nil && replacementAlpha != nil {
             return false
-        }
+        } 
         
 
         let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
