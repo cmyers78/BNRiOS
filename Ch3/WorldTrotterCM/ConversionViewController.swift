@@ -26,6 +26,13 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("ConversionViewController loaded its view.")
+    }
+    
+    
     let numberFormatter : NSNumberFormatter = {
        let nf = NSNumberFormatter()
         nf.numberStyle = .DecimalStyle
