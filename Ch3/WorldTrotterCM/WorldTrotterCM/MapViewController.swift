@@ -17,4 +17,10 @@ class MapViewController : UIViewController {
         print("MapViewController loaded its view")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
 }
