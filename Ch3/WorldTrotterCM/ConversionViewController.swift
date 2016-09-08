@@ -32,6 +32,27 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
         print("ConversionViewController loaded its view.")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute], fromDate: date)
+        
+        let hour = components.hour
+        let minute = components.minute
+        print(hour)
+        print(minute)
+        
+        if hour > 7 && hour < 20 {
+            view.backgroundColor = UIColor.greenColor()
+        }
+        else {
+            view.backgroundColor = UIColor.grayColor()
+        }
+
+    }
+    
     
     let numberFormatter : NSNumberFormatter = {
        let nf = NSNumberFormatter()
